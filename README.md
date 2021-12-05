@@ -4,4 +4,4 @@ Is a library for ui components
 
 # Getting started
 
-* npm i --save nl-ui
+1. npm i --save nl-ui
