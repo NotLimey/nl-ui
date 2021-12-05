@@ -10,7 +10,7 @@ Is a library for ui components
 
 ```javascript
 import './App.css';
-import { TitleHelmet} from 'nl-ui'
+import { TitleHelmet } from 'nl-ui'
 
 function App() {
   return (
