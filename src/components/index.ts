@@ -1,2 +1,2 @@
 export { default as Button } from "./Button";
-export { default as DefaulHelmet } from "./Helmets"
+export { default as DefaultHelmet } from "./Helmets"
