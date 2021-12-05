@@ -1,6 +1,6 @@
 # NL-UI / Notlimey UI
 
-Is a library for ui components
+Is a library for ui and functional components
 
 # Getting started
 
