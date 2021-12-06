@@ -2,6 +2,7 @@
 
 /* Hide the default checkbox */
 .checkbox-theme-default {
+    color: var(--text-clr);
     .checkmark {
         background-color: var(--background-shade-clr);
     }
@@ -14,6 +15,7 @@
 }
 
 .checkbox-theme-dark {
+    color: var(--dark-text-clr);
     .checkmark {
         background-color: var(--dark-background-shade-clr);
     }

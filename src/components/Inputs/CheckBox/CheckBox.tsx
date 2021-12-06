@@ -1,5 +1,5 @@
 import React from "react";
-import '@Scss/checkboxes.scss'
+import './checkbox.scss'
 import { CombineClasses } from '../../index';
 
 interface CheckBoxComponentProps {
