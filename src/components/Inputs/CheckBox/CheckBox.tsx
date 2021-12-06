@@ -19,7 +19,7 @@ const CheckBoxComponent : React.FC<CheckBoxComponentProps> = (props : CheckBoxCo
         {props.label}
         <input 
             type="checkbox" 
-            defaultChecked={props.defaultChecked || true} 
+            defaultChecked={props.defaultChecked || false}
             onChange={props.onChange}
         />
         <div className="checkmark"></div>
