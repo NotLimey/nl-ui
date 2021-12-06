@@ -53,6 +53,7 @@ const DefaultHelmet = ({Title, Description, SubTitle, MetaImage, FavIcon} : any)
 interface HelmetProps {
     Title?: string;
     SubTitle?: string;
+    Description?: string;
     MetaImage?: string;
     ThemeColor?: string;
     FavIcon?: string;
@@ -69,6 +70,14 @@ const DefaultHelmet : React.FC<HelmetProps> = (props : HelmetProps) => (
                 <title>{props.Title + (props.SubTitle && (props.TitleDivider || ' | ') + props.SubTitle) || ''}</title>
                 <meta name="title" content={props.Title + ((props.SubTitle && (props.TitleDivider || ' | ') + props.SubTitle)) || ''} />
                 <meta name="application-name" content={props.Title + ((props.SubTitle && (props.TitleDivider || ' | ') + props.SubTitle)) || ''} />
+                <meta name="apple-mobile-web-app-title" content={props.Title + ((props.SubTitle && (props.TitleDivider || ' | ') + props.SubTitle)) || ''} />
+            </Helmet>
+        }
+        {props.Description !== undefined &&
+            <Helmet>
+                <meta name="description" content={props.Description} />
+                <meta property="og:description" content={props.Description} />
+                <meta property="twitter:description" content={props.Description} />
             </Helmet>
         }
     </React.Fragment>
