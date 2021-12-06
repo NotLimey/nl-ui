@@ -1,4 +1,5 @@
 export { default as Button } from "./Button";
 export { DefaultHelmet } from "./Helmets"
-export { default as CombineClasses } from './Helpers'
+export {CombineClasses, Link} from './Helpers'
 export * from './Navigation';
+export { CheckBox } from './Inputs';
