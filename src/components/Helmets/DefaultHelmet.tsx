@@ -57,7 +57,7 @@ interface HelmetProps {
     MetaImage?: string;
     ThemeColor?: string;
     FavIcon?: string;
-    
+    AppleFavIcon?: string;
     TitleDivider?: string;
 }
 
@@ -89,7 +89,7 @@ const DefaultHelmet : React.FC<HelmetProps> = (props : HelmetProps) => (
         }
         {props.FavIcon !== undefined &&
             <Helmet>
-                <link rel="apple-touch-icon" sizes="180x180" href={props.FavIcon} ></link>
+                <link rel="apple-touch-icon" sizes="180x180" href={props.AppleFavIcon || props.FavIcon}></link>
                 <link rel="shortcut icon" href={props.FavIcon} />
                 <link rel="icon" type="image/png" sizes="32x32" href={props.FavIcon} />
                 <link rel="icon" type="image/png" sizes="16x16" href={props.FavIcon}></link>
