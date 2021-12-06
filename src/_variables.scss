@@ -3,8 +3,25 @@
     --background-clr: #1D2126;
     --second-background-clr: #191D21;
     --text-clr: #f1f1f1;
+    --text-clr-300: #dddddd;
     --default-shadow: rgba(17, 17, 19, 0.2) 0px 7px 10px 0px;
     --primary: rgb(92, 184, 92);
     --primary-border: rgba(92, 184, 92, .20);
     --primary-contrast: rgb(129, 190, 129);
+
+    --dark-background-clr: #e7e7e7;
+    --dark-second-background-clr: #f1f1f1;
+    --dark-text-clr: #212125;
+    --dark-text-clr-300: #313136;
+}
+
+$Roboto: 'Roboto', sans-serif;
+$NunitoSans: 'Nunito Sans', sans-serif;
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $Roboto;
+}
+
+p, a, button, span {
+    font-family: $NunitoSans;
 }
