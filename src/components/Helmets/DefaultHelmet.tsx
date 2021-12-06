@@ -2,8 +2,7 @@ import { Helmet } from "react-helmet";
 import React from "react";
 
 // For information on how to use this go to https://github.com/NotLimey/SRT-Template/blob/main/README.md#default-helmet
-
-const WebsiteUrl = window.location.href;
+/*
 const DefaultTitle = "RTS Template";
 const ThemeColor = "#000000";
 const DefaultDescription = 
@@ -12,14 +11,14 @@ const DefaultDescription =
 const DefaultHelmet = ({Title, Description, SubTitle, MetaImage, FavIcon} : any) => {
     return (
         <Helmet>
-            {/* Primary Meta Tags */}
+            {/* Primary Meta Tags /*
             <title>{Title ? Title : `${DefaultTitle}${SubTitle ? ` | ${SubTitle}` : ""}`}</title>
             <meta name="title" content={Title ? Title : `${DefaultTitle}${SubTitle ? ` | ${SubTitle}` : ""}`} />
             <meta name="application-name" content={SubTitle ? `${Title ? Title : DefaultTitle} | ${SubTitle}` : `${Title}`} />
 
             <meta name="description" content={Description ? Description : DefaultDescription} />
 
-            {/* Open Graph / Facebook */}
+            {/* Open Graph / Facebook /*
             <meta property="og:type" content="website" />
             <meta property="og:url" content={WebsiteUrl}  />
             <meta property="og:title" content={Title ? Title : `${DefaultTitle}${SubTitle ? ` | ${SubTitle}` : ""}`} />
@@ -27,7 +26,7 @@ const DefaultHelmet = ({Title, Description, SubTitle, MetaImage, FavIcon} : any)
             
             {MetaImage && <meta property="og:image" content={MetaImage} />}
 
-            {/* Twitter */}
+            {/* Twitter /*
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url" content={WebsiteUrl} />
             <meta property="twitter:title" content={Title ? Title : `${DefaultTitle}${SubTitle ? ` | ${SubTitle}` : ""}`} />
@@ -35,20 +34,36 @@ const DefaultHelmet = ({Title, Description, SubTitle, MetaImage, FavIcon} : any)
             
             {MetaImage && <meta property="twitter:image" content={MetaImage}></meta>}
 
-            {/* Apple */}
+            {/* Apple /*
             <meta name="apple-mobile-web-app-title" content={Title ? Title : `${DefaultTitle}${SubTitle ? ` | ${SubTitle}` : ""}`} />
 	
             <link rel="apple-touch-icon" sizes="180x180" href={FavIcon} ></link>
 
-            {/* FavIcons */}
+            {/* FavIcons/*
             <link rel="shortcut icon" href={FavIcon} />
             <link rel="icon" type="image/png" sizes="32x32" href={FavIcon} />
             <link rel="icon" type="image/png" sizes="16x16" href={FavIcon}></link>
 
-            {/* Theme Color */}
+            {/* Theme Color /*
 	        <meta name="theme-color" content={ThemeColor}></meta>
         </Helmet>
     );
+}*/
+
+interface HelmetProps {
+    Title?: string;
+    SubTitle?: string;
+    MetaImage?: string;
+    ThemeColor?: string;
+    FavIcon?: string;
 }
+
+const WebsiteUrl = window.location.href;
+
+const DefaultHelmet : React.FC<HelmetProps> = (props : HelmetProps) => (
+    <Helmet>
+        
+    </Helmet>
+)
 
 export default DefaultHelmet;
