@@ -57,6 +57,7 @@ interface HelmetProps {
     MetaImage?: string;
     ThemeColor?: string;
     FavIcon?: string;
+    
     TitleDivider?: string;
 }
 
@@ -86,10 +87,21 @@ const DefaultHelmet : React.FC<HelmetProps> = (props : HelmetProps) => (
                 <meta property="twitter:image" content={props.MetaImage}></meta>
             </Helmet>
         }
+        {props.FavIcon !== undefined &&
+            <Helmet>
+                <link rel="apple-touch-icon" sizes="180x180" href={props.FavIcon} ></link>
+                <link rel="shortcut icon" href={props.FavIcon} />
+                <link rel="icon" type="image/png" sizes="32x32" href={props.FavIcon} />
+                <link rel="icon" type="image/png" sizes="16x16" href={props.FavIcon}></link>
+            </Helmet>
+        }
         
         <Helmet>
             <meta property="og:url" content={WebsiteUrl}  />
             <meta property="twitter:url" content={WebsiteUrl} />
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta property="og:type" content="website" />
+	        <meta name="theme-color" content={props.ThemeColor || '#000000'}></meta>
         </Helmet>
     </React.Fragment>
 )
