@@ -56,13 +56,24 @@ interface HelmetProps {
     MetaImage?: string;
     ThemeColor?: string;
     FavIcon?: string;
+    TitleDivider?: string;
 }
 
 const WebsiteUrl = window.location.href;
 
 const DefaultHelmet : React.FC<HelmetProps> = (props : HelmetProps) => (
     <Helmet>
-        
+            {/* Primary Meta Tags */}
+            {props.Title !== undefined &&
+                <React.Fragment>
+                    <title>{`${props.Title}${props.SubTitle ? `${props.TitleDivider || ` | `}${props.SubTitle}` : ''}`}</title>
+                    <meta name="title" content={`${props.Title}${props.SubTitle ? `${props.TitleDivider || ` | `}${props.SubTitle}` : ''}`} />
+                    <meta name="application-name" content={`${props.Title}${props.SubTitle ? `${props.TitleDivider || ` | `}${props.SubTitle}` : ''}`} />
+                </React.Fragment>
+            }
+
+            <meta name="description" content={``} />
+
     </Helmet>
 )
 
