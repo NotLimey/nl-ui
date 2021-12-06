@@ -1,6 +1,6 @@
 {
   "name": "nl-ui",
-  "version": "0.1.26",
+  "version": "0.1.27",
   "description": "Notlimey's ui library",
   "scripts": {
     "build": "rollup -c"
@@ -22,7 +22,7 @@
   "main": "build/index.js",
   "module": "build/index.es.js",
   "files": ["build"],
-  "types": "dist/index.d.ts",
+  "types": "build/index.d.ts",
   "bugs": {
     "url": "https://github.com/NotLimey/nl-ui/issues"
   },
