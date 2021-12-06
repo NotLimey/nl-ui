@@ -1,4 +1,3 @@
-import DefaultHelmet from './DefaultHelmet';
+import DefaultHelmet from "./DefaultHelmet";
 
-export { DefaultHelmet}
-
+export { DefaultHelmet }
