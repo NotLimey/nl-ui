@@ -6,7 +6,7 @@ const externalExpression = /http(s)?:\/\/[\w\d]*\.[\w\d]+/g;
 export function linkIsExternal(link : string) {
     const match = link.match(externalExpression);
 
-    return match?.length && match.length > 0
+    return (match?.length && match.length > 0) || false
 }
 
 type Props = React.PropsWithChildren<{
@@ -14,17 +14,18 @@ type Props = React.PropsWithChildren<{
     content? : string;
 }>
 
-const Link = (props : Props) => linkIsExternal(props.to) ?
-    <RouterLink
-        children={props.children || props.content}
-        to={props.to}
-    />
-    :
-    <a
+const Link = (props : Props) => linkIsExternal(props.to) ? <a
+        className="external-link"
         href={props.to}
         rel="noreferrer"
         target="_blank"
         children={props.children || props.content}
+    />
+    : 
+    <RouterLink
+        className="link"
+        children={props.children || props.content}
+        to={props.to}
     />
 
 export default Link;
