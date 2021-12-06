@@ -80,6 +80,17 @@ const DefaultHelmet : React.FC<HelmetProps> = (props : HelmetProps) => (
                 <meta property="twitter:description" content={props.Description} />
             </Helmet>
         }
+        {props.MetaImage !== undefined &&
+            <Helmet>
+                <meta property="og:image" content={props.MetaImage} />
+                <meta property="twitter:image" content={props.MetaImage}></meta>
+            </Helmet>
+        }
+        
+        <Helmet>
+            <meta property="og:url" content={WebsiteUrl}  />
+            <meta property="twitter:url" content={WebsiteUrl} />
+        </Helmet>
     </React.Fragment>
 )
 
