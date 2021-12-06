@@ -62,16 +62,16 @@ interface HelmetProps {
 const WebsiteUrl = window.location.href;
 
 const DefaultHelmet : React.FC<HelmetProps> = (props : HelmetProps) => (
-    <Helmet>
-            {/* Primary Meta Tags */}
-            {props.Title !== undefined &&
-                <>
-                    <title>{props.Title + (props.SubTitle && (props.TitleDivider || ' | ') + props.SubTitle) || ''}</title>
-                    <meta name="title" content={props.Title + ((props.SubTitle && (props.TitleDivider || ' | ') + props.SubTitle)) || ''} />
-                    <meta name="application-name" content={props.Title + ((props.SubTitle && (props.TitleDivider || ' | ') + props.SubTitle)) || ''} />
-                </>
-            }
-    </Helmet>
+    <React.Fragment>
+    {/* Primary Meta Tags */}
+        {props.Title !== undefined &&
+            <Helmet>
+                <title>{props.Title + (props.SubTitle && (props.TitleDivider || ' | ') + props.SubTitle) || ''}</title>
+                <meta name="title" content={props.Title + ((props.SubTitle && (props.TitleDivider || ' | ') + props.SubTitle)) || ''} />
+                <meta name="application-name" content={props.Title + ((props.SubTitle && (props.TitleDivider || ' | ') + props.SubTitle)) || ''} />
+            </Helmet>
+        }
+    </React.Fragment>
 )
 
 export default DefaultHelmet;
