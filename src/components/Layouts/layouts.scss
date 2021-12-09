@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.nl-ui-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nl-ui-container-centered {
+    padding: 20px 10px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
+import { CombineClasses } from '.';
 
 const externalExpression = /http(s)?:\/\/[\w\d]*\.[\w\d]+/g;
 
@@ -12,10 +13,11 @@ export function linkIsExternal(link : string) {
 type Props = React.PropsWithChildren<{
     to : string;
     content? : string;
+    className? : string;
 }>
 
 const Link = (props : Props) => linkIsExternal(props.to) ? <a
-        className="external-link"
+        className={CombineClasses("external-link", props.className || '')}
         href={props.to}
         rel="noreferrer"
         target="_blank"
@@ -23,7 +25,7 @@ const Link = (props : Props) => linkIsExternal(props.to) ? <a
     />
     : 
     <RouterLink
-        className="link"
+        className={CombineClasses("link", props.className || '')}
         children={props.children || props.content}
         to={props.to}
     />
