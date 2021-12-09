@@ -59,6 +59,7 @@ interface HelmetProps {
     FavIcon?: string;
     AppleFavIcon?: string;
     TitleDivider?: string;
+    children?: React.ReactNode;
 }
 
 const WebsiteUrl = window.location.href;
@@ -102,6 +103,7 @@ const DefaultHelmet : React.FC<HelmetProps> = (props : HelmetProps) => (
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="og:type" content="website" />
 	        <meta name="theme-color" content={props.ThemeColor || '#000000'}></meta>
+            {props.children}
         </Helmet>
     </React.Fragment>
 )
