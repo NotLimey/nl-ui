@@ -28,48 +28,7 @@
     --secondary-contrast: #a760e5;
 }
 
-body {
-    background-color: var(--background-clr);
-    color: var(--text-clr);
-    h1, h2, h3, h4, h5, h6 {
-        color: var(--text-clr);
-    }
-    li {
-        color: var(--text-clr-200);
-    }
-    p, .cl, button {
-        color: var(--text-clr-300);
-    }
-    li code {
-        background-color: var(--background-shade-clr);
-    }
-    code.cl {
-        background-color: var(--background-shade-clr);
-    }
-    button {
-        background-color: var(--background-shade-clr);
-        border: none;
-        padding: 5px 10px;
-        font-size: 17px;
-        border-radius: 5px;
-    }
-    * {
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-    }
-}
-
-body[data-theme="dark"] {
-    --background-clr: #1D2126;
-    --second-background-clr: #191D21;
-    --background-shade-clr: #33393f;
-    --text-clr: rgba(255, 255, 255, 0.87);
-    --text-clr-200: rgba(255, 255, 255, 0.7);
-    --text-clr-300: rgba(255, 255, 255, 0.6);
-    --text-clr-500: rgba(255, 255, 255, 0.5);
-}
-
-.dark {
+.nl-ui-dark {
     background-color: var(--dark-background-clr);
     color: var(--dark-text-clr);
     h1, h2, h3, h4, h5, h6, code.cl, li code {
@@ -89,7 +48,7 @@ body[data-theme="dark"] {
     }
 }
 
-.light {
+.nl-ui-light {
     background-color: var(--background-clr);
     color: var(--text-clr);
     h1, h2, h3, h4, h5, h6 {
