@@ -1,71 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-    --background-clr: #f1f1f1;
-    --second-background-clr: #fff;
-    --background-shade-clr: #e7e7e7;
+    --nl-ui-background-clr: #f1f1f1;
+    --nl-ui-second-background-clr: #fff;
+    --nl-ui-background-shade-clr: #e7e7e7;
 
-    --dark-background-clr: #1D2126;
-    --dark-second-background-clr: #191D21;
-    --dark-background-shade-clr: #33393f;
+    --nl-ui-dark-background-clr: #1D2126;
+    --nl-ui-dark-second-background-clr: #191D21;
+    --nl-ui-dark-background-shade-clr: #33393f;
     
-    --text-clr: rgba(0,0,0,.87);
-    --text-clr-200: rgba(0,0,0,.7);
-    --text-clr-300: rgba(0,0,0,.6);;
-    --text-clr-500: rgba(0,0,0,.5);;
+    --nl-ui-text-clr: rgba(0,0,0,.87);
+    --nl-ui-text-clr-200: rgba(0,0,0,.7);
+    --nl-ui-text-clr-300: rgba(0,0,0,.6);;
+    --nl-ui-text-clr-500: rgba(0,0,0,.5);;
 
-    --dark-text-clr: rgba(255, 255, 255, 0.87);
-    --dark-text-clr-200: rgba(255, 255, 255, 0.7);
-    --dark-text-clr-300: rgba(255, 255, 255, 0.6);
-    --dark-text-clr-500: rgba(255, 255, 255, 0.5);
+    --nl-ui-dark-text-clr: rgba(255, 255, 255, 0.87);
+    --nl-ui-dark-text-clr-200: rgba(255, 255, 255, 0.7);
+    --nl-ui-dark-text-clr-300: rgba(255, 255, 255, 0.6);
+    --nl-ui-dark-text-clr-500: rgba(255, 255, 255, 0.5);
 
-    --default-shadow: rgba(17, 17, 19, 0.2) 0px 7px 10px 0px;
+    --nl-ui-default-shadow: rgba(17, 17, 19, 0.2) 0px 7px 10px 0px;
 
-    --primary: rgb(92, 184, 92);
-    --primary-border: rgba(92, 184, 92, .20);
-    --primary-contrast: hsl(120, 32%, 43%);
-    --secondary: #892cdc;
-    --secondary-contrast: #a760e5;
-}
-
-.nl-ui-dark {
-    background-color: var(--dark-background-clr);
-    color: var(--dark-text-clr);
-    h1, h2, h3, h4, h5, h6, code.cl, li code {
-        color: var(--dark-text-clr);
-    }
-    li {
-        color: var(--dark-text-clr-200);
-    }
-    p, .cl, button, li {
-        color: var(--dark-text-clr-300);
-    }
-    li code {
-        background-color: var(--dark-background-shade-clr);
-    }
-    code.cl {
-        background-color: var(--dark-background-shade-clr);
-    }
-}
-
-.nl-ui-light {
-    background-color: var(--background-clr);
-    color: var(--text-clr);
-    h1, h2, h3, h4, h5, h6 {
-        color: var(--text-clr);
-    }
-    li {
-        color: var(--text-clr-200);
-    }
-    p, .cl, button {
-        color: var(--text-clr-300);
-    }
-    li code {
-        background-color: var(--background-shade-clr);
-    }
-    code.cl {
-        background-color: var(--background-shade-clr);
-    }
+    --nl-ui-primary: rgb(92, 184, 92);
+    --nl-ui-primary-border: rgba(92, 184, 92, .20);
+    --nl-ui-primary-contrast: hsl(120, 32%, 43%);
+    --nl-ui-secondary: #892cdc;
+    --nl-ui-secondary-contrast: #a760e5;
 }
 
 $Nunito-Sans: 'Nunito Sans', sans-serif;

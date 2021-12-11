@@ -2,28 +2,28 @@
 
 /* Hide the default checkbox */
 .checkbox-theme-default {
-    color: var(--text-clr);
+    color: var(--nl-ui-text-clr);
     .checkmark {
-        background-color: var(--background-shade-clr);
+        background-color: var(--nl-ui-background-shade-clr);
     }
     input:checked ~ .checkmark {
         background-color: #42a5f5;
     }
     .checkmark:after {
-        border: solid var(--background-shade-clr);
+        border: solid var(--nl-ui-background-shade-clr);
     }
 }
 
 .checkbox-theme-dark {
-    color: var(--dark-text-clr);
+    color: var(--nl-ui-dark-text-clr);
     .checkmark {
-        background-color: var(--dark-background-shade-clr);
+        background-color: var(--nl-ui-dark-background-shade-clr);
     }
     input:checked ~ .checkmark {
         background-color: #42a5f5;
     }
     .checkmark:after {
-        border: solid var(--dark-background-shade-clr);
+        border: solid var(--nl-ui-dark-background-shade-clr);
     }
 }
 
