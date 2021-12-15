@@ -10,12 +10,12 @@ Is a library for ui and functional components for react and or typescript
 
 ```javascript
 import './App.css';
-import { TitleHelmet } from 'nl-ui'
+import { DefaultHelmet } from 'nl-ui'
 
 function App() {
   return (
     <div className="App">
-      <TitleHelmet Title="Hey" SubTitle="cool" />
+      <DefaultHelmet Title="Hey" SubTitle="cool" />
     </div>
   );
 }
