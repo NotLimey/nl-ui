@@ -20,4 +20,15 @@ function App() {
   );
 }
 
-export default App;```
+export default App;
+```
+
+- **Title?**: string;
+- **SubTitle?**: string;
+- **Description?**: string;
+- **MetaImage?**: string;
+- **ThemeColor?**: string;
+- **FavIcon?**: string;
+- **AppleFavIcon?**: string;
+- **TitleDivider?**: string;
+- **children?**: React.ReactNode;
