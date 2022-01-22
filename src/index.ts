@@ -1,1 +1,4 @@
-export * from './components';
+export { 
+    DefaultHelmet,
+    CombineClasses
+} from './components';
