@@ -1,4 +1,3 @@
 export { 
-    DefaultHelmet,
-    CombineClasses
+    DefaultHelmet
 } from './components';
