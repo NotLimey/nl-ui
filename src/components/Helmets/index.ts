@@ -1,3 +1,4 @@
 import DefaultHelmet from "./DefaultHelmet";
+import { HelmetContext, HelmetProvider } from "./HelmetProvider";
 
-export { DefaultHelmet }
+export { DefaultHelmet, HelmetContext, HelmetProvider }
