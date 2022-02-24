@@ -1,5 +1,1 @@
-export { 
-    DefaultHelmet,
-    HelmetContext,
-    HelmetProvider
-} from './components';
+export * from './components';
