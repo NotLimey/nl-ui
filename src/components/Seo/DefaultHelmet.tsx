@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 
+let defaultTitle = "";
 
 interface DefaultHelmetProps {
-
+    title?: string;
+    defaultValue?: boolean;
 }
 
-export const DefaultHelmet = (props: DefaultHelmetProps) => {
+export const DefaultHelmet : React.FC<DefaultHelmetProps> = (props: DefaultHelmetProps) => {
+
+    useEffect(() => {
+    }, [])
 
     return (
         <div>
@@ -16,5 +21,6 @@ export const DefaultHelmet = (props: DefaultHelmetProps) => {
 
 /*
 
+    DefaultHelmet
 
 */
