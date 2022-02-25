@@ -1,2 +1,2 @@
 
-export * from './Seo'
+export * from './Helmets'
