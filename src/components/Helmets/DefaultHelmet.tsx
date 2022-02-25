@@ -34,7 +34,7 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
     if(props) {
         const keys = Object.keys(props);
         for(var i = 0; i < keys.length; i++) {
-            if(props[keys[i]] && keys[i] !== "children")
+            if(props[keys[i]] === "title" || props[keys[i]] === "subTitle" || props[keys[i]] === "titleDivider")
                 defaultSettings[keys[i]] = props[keys[i]]
         }
     }
@@ -74,29 +74,29 @@ export const DefaultHelmet = (props : DefaultHelmetProps) => {
                     <meta name="og:title" content={getTitle()} />
                 </Helmet>
             }
-            {(props.description || _defaultSettings.description) &&
+            {props.description &&
                 <Helmet>
-                    <meta name="description" content={props.description ?? _defaultSettings.description}/>
-                    <meta name="og:description" content={props.description ?? _defaultSettings.description} />
+                    <meta name="description" content={props.description}/>
+                    <meta name="og:description" content={props.description} />
                 </Helmet>
             }
             <Helmet>
-                {(props.keywords || _defaultSettings.keywords) && <meta name="keywords" content={props.keywords ?? _defaultSettings.keywords} />}
-                {(props.subject || _defaultSettings.subject) && <meta name="subject" content={props.subject ?? _defaultSettings.subject} />}
-                {(props.copyright || _defaultSettings.copyright) && <meta name="copyright" content={props.copyright ?? _defaultSettings.copyright} />}
-                {(props.language || _defaultSettings.language) && <meta name="language" content={props.language ?? _defaultSettings.language} />}
-                {(props.robots || _defaultSettings.robots) && <meta name="robots" content={props.robots ?? _defaultSettings.robots} />}
-                {(props.revised || _defaultSettings.revised) && <meta name="revised" content={props.revised ?? _defaultSettings.revised} />}
-                {(props.topic || _defaultSettings.topic) && <meta name="topic" content={props.topic ?? _defaultSettings.topic} />}
-                {(props.summary || _defaultSettings.summary) && <meta name="summary" content={props.summary ?? _defaultSettings.summary} />}
-                {(props.Classification || _defaultSettings.Classification) && <meta name="Classification" content={props.Classification ?? _defaultSettings.Classification} />}
-                {(props.author || _defaultSettings.author) && <meta name="author" content={props.author ?? _defaultSettings.author} />}
-                {(props.replyTo || _defaultSettings.replyTo) && <meta name="replyTo" content={props.replyTo ?? _defaultSettings.replyTo} />}
-                {(props.owner || _defaultSettings.owner) && <meta name="owner" content={props.owner ?? _defaultSettings.owner} />}
-                {(props.url || _defaultSettings.url) ? <meta name="url" content={props.url ?? _defaultSettings.owurlner} /> : <meta name="url" content={window.location.origin + window.location.pathname} />}
-                {(props.identifierURL || _defaultSettings.identifierURL) && <meta name="identifierURL" content={props.identifierURL ?? _defaultSettings.identifierURL} />}
-                {(props.image || _defaultSettings.image) && <meta property="og:image" content={props.image ?? _defaultSettings.image} />}
-                {(props.favIcon || _defaultSettings.favIcon) && <link rel="icon" type="image/x-icon" href={props.favIcon ?? _defaultSettings.favIcon} />}
+                {props.keywords && <meta name="keywords" content={props.keywords} />}
+                {props.subject && <meta name="subject" content={props.subject} />}
+                {props.copyright && <meta name="copyright" content={props.copyright} />}
+                {props.language && <meta name="language" content={props.language} />}
+                {props.robots && <meta name="robots" content={props.robots} />}
+                {props.revised && <meta name="revised" content={props.revised} />}
+                {props.topic && <meta name="topic" content={props.topic} />}
+                {props.summary && <meta name="summary" content={props.summary} />}
+                {props.Classification && <meta name="Classification" content={props.Classification} />}
+                {props.author && <meta name="author" content={props.author} />}
+                {props.replyTo && <meta name="replyTo" content={props.replyTo} />}
+                {props.owner && <meta name="owner" content={props.owner} />}
+                {props.url ? <meta name="url" content={props.url} /> : <meta name="url" content={window.location.origin + window.location.pathname} />}
+                {props.identifierURL && <meta name="identifierURL" content={props.identifierURL} />}
+                {props.image && <meta property="og:image" content={props.image} />}
+                {props.favIcon && <link rel="icon" type="image/x-icon" href={props.favIcon} />}
                 {props.children}
             </Helmet>
         </React.Fragment>
